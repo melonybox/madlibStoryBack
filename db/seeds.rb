@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Madlib.destroy_all
-Madlib.reset_pk_sequence
-
 History.destroy_all
+Madlib.destroy_all
+
+Madlib.reset_pk_sequence
 History.reset_pk_sequence
 
 Madlib.create(chapter: "01", title: "Hello", template: "Time to cast a <spell> in the name of <person>.", placeHolderEmpty: "{\"<spell>\": \"\", \"<person>\": \"\"}")
