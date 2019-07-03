@@ -13,4 +13,14 @@ class Api::V1::HistoriesController < ApplicationController
 			render json: {errors: chapter.errors.full_messages}
 		end
 	end
+
+  def update
+    chapter = History.find(params[:id])
+
+    if chapter.update(user_id: params[:user_id], madlib_id: params[:madlib_id], placeHolderFilled: params[:placeHolderFilled])
+      render json: chapter
+    else
+      render json: {errors: chapter.errors.full_messages}
+    end
+  end
 end
