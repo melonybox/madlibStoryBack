@@ -7,9 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 History.destroy_all
 Madlib.destroy_all
+User.destroy_all
 
 Madlib.reset_pk_sequence
 History.reset_pk_sequence
+User.reset_pk_sequence
 
 Madlib.create(chapter: "01", title: "Hello", template: "Time to cast a <spell> in the name of <person>.", placeHolderEmpty: "{\"<spell>\": \"\", \"<person>\": \"\"}")
 Madlib.create(chapter: "02", title: "Aron", template: "Did you eat <food> at the time of dawn. Say hello to <person> after. They are going to <place> as well.", placeHolderEmpty: "{\"<food>\": \"\", \"<person>\": \"\", \"<place>\": \"\"}")

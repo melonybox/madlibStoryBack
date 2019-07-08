@@ -34,4 +34,12 @@ class Api::V1::HistoriesController < ApplicationController
       render json: {errors: chapter.errors.full_messages}
     end
   end
+
+  def destroy
+    user = User.find(params[:id])
+    user.histories.destroy_all
+    user.update(username: user[:username], password_digest: user[:password_digest], current_chapter: nil)
+
+    render json: user
+  end
 end
