@@ -1,25 +1,39 @@
-# README
+# Madlibs: Blank Resurrection
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
 
-Things you may want to cover:
+A madlib application where the user fills in prompts with their input, can go through chapters of a story, edit chapters they have done with different inputs or start the story over.
 
-* Ruby version
+This is the back end portion to https://github.com/melonybox/madlibStoryFront.<br>
+Back end portion should be started first.
 
-* System dependencies
+This portion uses:<br>
+ruby<br>
+rails<br>
+postgresql<br>
+activerecord<br>
+serializers<br>
+rack-cors<br>
+bcript<br>
+jwt<br>
 
-* Configuration
+## How To Start
 
-* Database creation
+In the project directory, you can run:
 
-* Database initialization
+### `bundle install`
 
-* How to run the test suite
+To ensure all the required packages are installed for this project.
 
-* Services (job queues, cache servers, search engines, etc.)
+### `rails db:migrate`
 
-* Deployment instructions
+To create the schema needed.
 
-* ...
-# madlibStoryBack
+### `rails db:seed`
+
+To seed the db with current needed info.
+
+### `rails s`
+
+Runs the app.<br>
+Ensure it is ran as [http://localhost:3000](http://localhost:3000).
